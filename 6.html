@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="简介距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。">
+<meta name="keywords" content="玩机,干货">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你如何使用U盘安装Windows10系统">
+<meta property="og:url" content="https://cacl2.ml/6.html">
+<meta property="og:site_name" content="CaCl2 Blog">
+<meta property="og:description" content="简介距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/PsppqO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/PspMdg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/PspGzq.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/PspReO.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/Ps9MX6.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/07/Ps9GAe.jpg">
+<meta property="og:updated_time" content="2019-01-25T12:50:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="教你如何使用U盘安装Windows10系统">
+<meta name="twitter:description" content="简介距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/08/07/PsppqO.png">
+  <link rel="alternate" href="/atom.xml" title="CaCl2 Blog" type="application/atom+xml">
+  <link rel="canonical" href="https://cacl2.ml/6">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>教你如何使用U盘安装Windows10系统 | CaCl2 Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?dbea60d8ee40c28cfaf826243a179953";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CaCl2 Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">某OIer的个人Blog</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cacl2.ml/6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CaCl2">
+      <meta itemprop="description" content="一个兴趣使然的无名小站">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CaCl2 Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">教你如何使用U盘安装Windows10系统
+
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-07 14:17:00" itemprop="dateCreated datePublished" datetime="2018-08-07T14:17:00+08:00">2018-08-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-01-25 20:50:38" itemprop="dateModified" datetime="2019-01-25T20:50:38+08:00">2019-01-25</time>
+              </span>
+            
+          
+
+          
+            <span id="/6.html" class="post-meta-item leancloud_visitors" data-flag-title="教你如何使用U盘安装Windows10系统" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/6.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h6 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h6><p>距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。</p>
+<a id="more"></a>
+<hr>
+<h6 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料"></a>准备材料</h6><ul>
+<li>硬件<ul>
+<li>U盘/读卡器（不小于4GB）</li>
+<li>一台未搭载Windows10的电脑</li>
+</ul>
+</li>
+<li>软件<ul>
+<li>Ultra ISO软碟通 <a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener">下载链接</a>（请支持正版，不提供破解版下载）</li>
+<li>Windows 10 ISO文件（附文末）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h5><h6 id="0x01-下载文件"><a href="#0x01-下载文件" class="headerlink" title="0x01.下载文件"></a>0x01.下载文件</h6><h6 id="下载Windows10ISO文件"><a href="#下载Windows10ISO文件" class="headerlink" title="下载Windows10ISO文件"></a>下载Windows10ISO文件</h6><p>首先，我们需要下载好Windows10的ISO文件（【需用迅雷下载）<br><a href="https://imgchr.com/i/PsppqO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PsppqO.png" alt="PsppqO.png"></a><br>文件有3.24GB, 下载需要一定时间。（会在文末给出ed2k链接，复制好后进入迅雷可直接下载）。</p>
+<h6 id="下载UltraISO"><a href="#下载UltraISO" class="headerlink" title="下载UltraISO"></a>下载UltraISO</h6><p>点开我放在上面的链接后，点击【免费下载试用】，即可下载安装包文件，安装过程不再赘述。<br><a href="https://imgchr.com/i/PspMdg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspMdg.png" alt="PspMdg.png"></a></p>
+<h6 id="0x02-写入至U盘"><a href="#0x02-写入至U盘" class="headerlink" title="0x02.写入至U盘"></a>0x02.写入至U盘</h6><p>当我们把上面两项都安装并下载好后，我们插入U盘（台式尽量选择后侧USB接口），打开安装好的Ultra ISO<br><a href="https://imgchr.com/i/PspGzq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspGzq.jpg" alt="PspGzq.jpg"></a><br>（因笔者已购买该软件，在网上找了张图，来源见水印。）</p>
+<p>我们打开软件后，点击继续试用（若要体验完整版请订购<br>),进入主界面，点击红框框出的部位，找到自己放置ISO文件的目录，并双击打开刚刚下好的ISO文件。<br><a href="https://imgchr.com/i/PspReO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspReO.jpg" alt="PspReO.jpg"></a><br>打开ISO文件后，依次点击【启动】-【写入硬盘映像】-【硬盘驱动器（选择u盘）】-【写入方式】选择 【USB-HDD+】-【写入】<br><a href="https://imgchr.com/i/Ps9MX6" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/Ps9MX6.jpg" alt="Ps9MX6.jpg"></a><br><a href="https://imgchr.com/i/Ps9GAe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/Ps9GAe.jpg" alt="Ps9GAe.jpg"></a><br>当以上步骤都做好后，你会发现U盘里多出了许多文件，至此，一个启动盘就做好了。</p>
+<h6 id="0x03-开始安装"><a href="#0x03-开始安装" class="headerlink" title="0x03.开始安装"></a>0x03.开始安装</h6><p>我们重启电脑，在BIOS初始化页面打开boot menu（根据自己主板型号搜索打开方式），用键盘方向键选择【USB-HDD+】，按Enter键确认，这时，我们会进入windows10的安装界面，过程十分简单，只需要设置一些内容，后面的过程都是自动化的，安装好后会自动重启，进入全新的Windwos10系统（如果安装时选择升级会保留之前Windwos的设置）</p>
+<hr>
+<p>附:<br>Windows10 ISO：<code>ed2k://|file|cn_windows_10_consumer_editions_version_1803_updated_march_2018_x86_dvd_12063452.iso|3480692736|0EC3C40EF13D772798209981F18B6A5D|/</code><br>本文部分链接与图片转自PConline及I tell you</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>CaCl2</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://cacl2.ml/6.html" title="教你如何使用U盘安装Windows10系统">https://cacl2.ml/6.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/玩机/" rel="tag"># 玩机</a>
+            
+              <a href="/tags/干货/" rel="tag"># 干货</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/5.html" rel="next" title="本网站已全面恢复">
+                  <i class="fa fa-chevron-left"></i> 本网站已全面恢复
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/7.html" rel="prev" title=" 游虞山、太湖">
+                   游虞山、太湖 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="CaCl2">
+  <p class="site-author-name" itemprop="name">CaCl2</p>
+  <div class="site-description motion-element" itemprop="description">一个兴趣使然的无名小站</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/lvhuagai" title="GitHub &rarr; https://github.com/lvhuagai" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#准备材料"><span class="nav-number">2.</span> <span class="nav-text">准备材料</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#教程开始"><span class="nav-number"></span> <span class="nav-text">教程开始</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#0x01-下载文件"><span class="nav-number">1.</span> <span class="nav-text">0x01.下载文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#下载Windows10ISO文件"><span class="nav-number">2.</span> <span class="nav-text">下载Windows10ISO文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#下载UltraISO"><span class="nav-number">3.</span> <span class="nav-text">下载UltraISO</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#0x02-写入至U盘"><span class="nav-number">4.</span> <span class="nav-text">0x02.写入至U盘</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#0x03-开始安装"><span class="nav-number">5.</span> <span class="nav-text">0x03.开始安装</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CaCl2</span>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("07/22/2018 15:32:14");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "\n本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '7TjuPxxPtFv5xFrjX55SgVHx-gzGzoHsz',
+    appKey: 'zFalv6acv7yiOXwwYMdz4B5K',
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>

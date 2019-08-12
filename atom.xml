@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CaCl2 Blog</title>
+  
+  <subtitle>某OIer的个人Blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://cacl2.ml/"/>
+  <updated>2019-02-08T13:19:24.000Z</updated>
+  <id>https://cacl2.ml/</id>
+  
+  <author>
+    <name>CaCl2</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>傻瓜式搭建V2ray服务器</title>
+    <link href="https://cacl2.ml/V2ray-server.html"/>
+    <id>https://cacl2.ml/V2ray-server.html</id>
+    <published>2019-02-08T08:46:47.000Z</published>
+    <updated>2019-02-08T13:19:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于一些众所周知的原因，在国内ip环境下无法访问Google，YouTube这类网站。网络上流行的科学上网软件大多速度慢，又不稳定。因此自己搭建一个科学上网节点就显得很方便，今天，要教大家如何搭建<strong>V2ray科学上网节点</strong>。</p><a id="more"></a><p>网上的V2ray搭建教程都过于繁琐，本教程搭建使用了一键搭建脚本，搭建完成后并配有web后台管理。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul><li>一台国外服务器 <a href="https://vultr.com" title="点我进入官网" target="_blank" rel="noopener">Vultr</a></li><li>ssh连接软件</li><li>连接客户端</li><li>一颗肯钻研的心</li></ul><hr><h2 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h2><p>这里推荐Vultr（真不是打广告，广告费还没给我呢），当然，如果你用搬瓦工等其它服务商也是可以的，Vultr支持微信支付，我们进入Vultr官网后只要选择购买3.5$/月的VPS即可，系统选择Debian 9，服务器地点最好选像日本，新加坡的，本人购买的是新加坡。</p><h2 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h2><h3 id="连接服务器"><a href="#连接服务器" class="headerlink" title="连接服务器"></a>连接服务器</h3><p>购买好服务器后，我们可以看到服务器的基本信息(见图1.1)，我们需要记住服务器的IP地址和密码，用户名默认为root。<br><img src="http://pan.cacl2.ml/?/imgbed/1.1.jpg" alt="图1.1" title="1.1"><br>有了服务器，我们需要连接服务器来执行命令，我们可以使用<a href="https://putty.org" title="点我下载" target="_blank" rel="noopener">Putty</a>这款应用，下载安装好后，打开应用（图1.2）<br><img src="http://pan.cacl2.ml/?/imgbed/1.2.jpg" alt="图1.2" title="1.2"><br>这样，我们就连接上了服务器，进行登录(图1.3)。<br><img src="http://pan.cacl2.ml/?/imgbed/1.3.jpg" alt="图1.3" title="1.3"></p><h3 id="使用一键脚本安装V2ray"><a href="#使用一键脚本安装V2ray" class="headerlink" title="使用一键脚本安装V2ray"></a>使用一键脚本安装V2ray</h3><p><em>该教程脚本使用V2ray.fun，已在Github开源<a href="https://github.com/FunctionClub/V2ray.Fun" target="_blank" rel="noopener">立即跳转&gt;&gt;</a></em><br>在命令行内输入<br><code>wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;&amp; bash install.sh</code><br>由于作者已安装过一次了，一些安装步骤不方便展示出来，按照脚本的提示一步一步来就可以了，如果有不懂的默认值就可以。</p><h2 id="开始科学上网"><a href="#开始科学上网" class="headerlink" title="开始科学上网"></a>开始科学上网</h2><h3 id="登陆面板获取配置信息"><a href="#登陆面板获取配置信息" class="headerlink" title="登陆面板获取配置信息"></a>登陆面板获取配置信息</h3><p>面板默认监听端口为5000，浏览器输入 <strong>你的IP:5000</strong>（如果你没改的话），输入你之前设置的用户名和密码，即可登录<br><img src="http://pan.cacl2.ml/?/imgbed/1.4.jpg" alt></p><h3 id="下载客户端"><a href="#下载客户端" class="headerlink" title="下载客户端"></a>下载客户端</h3><p>这里作者是用的V2rayN，打开后会自动隐藏在最小化托盘，右击图标</p><h2 id><a href="#" class="headerlink" title></a><img src="http://pan.cacl2.ml/?/imgbed/1.5.jpg" alt></h2><p>完成以上所有步骤后，你会发现你可以访问谷歌了。Enjoy it!</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;由于一些众所周知的原因，在国内ip环境下无法访问Google，YouTube这类网站。网络上流行的科学上网软件大多速度慢，又不稳定。因此自己搭建一个科学上网节点就显得很方便，今天，要教大家如何搭建&lt;strong&gt;V2ray科学上网节点&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="科学上网" scheme="https://cacl2.ml//tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+      <category term="教程" scheme="https://cacl2.ml//tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一维数组</title>
+    <link href="https://cacl2.ml/CPP-array.html"/>
+    <id>https://cacl2.ml/CPP-array.html</id>
+    <published>2019-02-03T09:24:20.000Z</published>
+    <updated>2019-02-03T09:37:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>同类型变量或对象的集合称为数组。</p><a id="more"></a><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>在C++语言中，一维数组定义方法如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">15</span>];</span><br><span class="line"><span class="comment">//int为类型名，a为数组名，[15]为元素个数。</span></span><br></pre></td></tr></table></figure><p>其中，元素个数必须是常数或常量表达式。</p><p>数组中的变量称为数组元素，由于数组中每个元素都有下标，因此数组元素也成为下标变量。</p><p>数组下标取值从0开始，使用数组时下标不能越界。同一数组的所有元素在内存中占用一片连续的存储单元。</p><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>每个数组元素都是一个变量，数组元素可以表示为：</p><p>数组名[下标]</p><p>其中，下标可以是任何值为整型的表达式，该表达式里可以包含变量和函数调用。引用时，下标值应在数组定义的下标值范围内。</p><h3 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h3><p>在定义一个一维数组的同时，可以给数组中的元素赋初值。</p><p>数组名[常量表达式]={值1,值2}</p><p>例:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br></pre></td></tr></table></figure><p>与</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]=<span class="number">0</span>;a[<span class="number">1</span>]=<span class="number">1</span>;a[<span class="number">2</span>]=<span class="number">2</span>;a[<span class="number">3</span>]=<span class="number">3</span>;a[<span class="number">4</span>]=<span class="number">4</span>;a[<span class="number">5</span>]=<span class="number">5</span>;a[<span class="number">6</span>]=<span class="number">6</span>;a[<span class="number">7</span>]=<span class="number">7</span>;a[<span class="number">8</span>]=<span class="number">8</span>;a[<span class="number">9</span>]=<span class="number">9</span>;</span><br></pre></td></tr></table></figure><p>等价</p><h3 id="数组越界"><a href="#数组越界" class="headerlink" title="数组越界"></a>数组越界</h3><p>C++语言规定，使用数组时，要注意：</p><p>(1)数组元素下标为正整数。</p><p>(2)在定义元素个数的下标范围内使用。</p><p>然而，当在程序中把下标写成负数、大于数组元素的个数时，程序编译的时候是不会出错的。例如：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line">a[<span class="number">-3</span>]=<span class="number">5</span>;</span><br><span class="line">a[<span class="number">20</span>]=<span class="number">15</span>;</span><br><span class="line">a[<span class="number">10</span>]=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> k=a[<span class="number">30</span>];</span><br></pre></td></tr></table></figure><p>这些语句的语法是正确的，能够通过编译。然而，它们要访问的数组元素并不在数组的存储空间内，这种现象叫做数组越界。</p><p>发现程序中有否数组越界没有什么好的方法，需要在编写时特别的注意，同时，程序编写完成后，加强<strong>静查</strong>。所谓“静查”，即认真阅读程序是否按照设计的要求编写。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h3&gt;&lt;p&gt;同类型变量或对象的集合称为数组。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://cacl2.ml//tags/C/"/>
+    
+      <category term="计算机编程" scheme="https://cacl2.ml//tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++逻辑表达式</title>
+    <link href="https://cacl2.ml/CPP-bool.html"/>
+    <id>https://cacl2.ml/CPP-bool.html</id>
+    <published>2019-01-05T10:37:05.000Z</published>
+    <updated>2019-02-03T09:37:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经2019年了，博客文章是时候写一点了，以后更新频率可能会高一些，以上。</p><a id="more"></a><hr><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>由数学家George Boole提出</p><table><thead><tr><th>说明</th><th>非</th><th>与</th><th>或</th></tr></thead><tbody><tr><td>布尔代数符号</td><td>¬</td><td>∧</td><td>∨</td></tr><tr><td>C++逻辑运算符</td><td>!</td><td>&amp;&amp;</td><td>ll（原运算符应为两个vertical_bar符号，markdown语法原因这里无法写出）</td></tr></tbody></table><p><em>在c++中，非运算优先级最高，与运算其次，或运算最低</em></p><h3 id="逻辑表达式"><a href="#逻辑表达式" class="headerlink" title="逻辑表达式"></a>逻辑表达式</h3><p>用逻辑运算符连接表达式的表达式称为逻辑表达式。逻辑表达式的结果是一个逻辑值（“真”或“假”）。<br>实例：<code>c&gt;=75&amp;&amp;m&gt;=85</code></p><h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> main&#123;</span><br><span class="line"><span class="keyword">bool</span> A,B;</span><br><span class="line">A=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;!A&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">//逻辑非，输出结果为0（false）</span></span><br><span class="line">B=<span class="literal">false</span>;</span><br><span class="line"><span class="keyword">if</span>(A==<span class="literal">true</span> &amp;&amp; B==<span class="literal">true</span>)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"0"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//逻辑与，输出结果为0</span></span><br><span class="line"><span class="keyword">if</span>(A==<span class="literal">true</span> || B==<span class="literal">true</span>)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"0"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//逻辑或，输出结果为1</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="逻辑变量"><a href="#逻辑变量" class="headerlink" title="逻辑变量"></a>逻辑变量</h4><p>在上文代码中，出现了一个新的数据类型，这就是今天要介绍的<code>bool</code>数据类型。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> a,b;</span><br><span class="line"><span class="comment">//a,b两变量均为逻辑变量，又称布尔变量</span></span><br></pre></td></tr></table></figure><p>逻辑变量只有真（1），假（0）两个值</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;已经2019年了，博客文章是时候写一点了，以后更新频率可能会高一些，以上。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://cacl2.ml//tags/C/"/>
+    
+      <category term="计算机编程" scheme="https://cacl2.ml//tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++数据类型</title>
+    <link href="https://cacl2.ml/CPP1.html"/>
+    <id>https://cacl2.ml/CPP1.html</id>
+    <published>2018-11-27T13:08:08.000Z</published>
+    <updated>2019-02-03T09:37:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用编程语言进行编程时，需要用到各种变量来存储各种信息。变量保留的是它所存储的值的内存位置。这意味着，当您创建一个变量时，就会在内存中保留一些空间。您可能需要存储各种数据类型（比如字符型、宽字符型、整型、浮点型、双浮点型、布尔型等）的信息，操作系统会根据变量的数据类型，来分配内存和决定在保留内存中存储什么。</p></blockquote><a id="more"></a><hr><h2 id="C-基本内置类型"><a href="#C-基本内置类型" class="headerlink" title="C++基本内置类型"></a>C++基本内置类型</h2><table><thead><tr><th>类型</th><th>关键字</th></tr></thead><tbody><tr><td>布尔值</td><td>bool</td></tr><tr><td>字符型</td><td>char</td></tr><tr><td>整型</td><td>int</td></tr><tr><td>浮点型</td><td>float</td></tr><tr><td>双浮点型</td><td>double</td></tr><tr><td>无类型</td><td>void</td></tr><tr><td>宽字符型</td><td>wachr_t</td></tr></tbody></table><p>浮点型实例</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">float</span> a,b,h;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;h;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;(a+b)*h/<span class="number">2</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;使用编程语言进行编程时，需要用到各种变量来存储各种信息。变量保留的是它所存储的值的内存位置。这意味着，当您创建一个变量时，就会在内存中保留一些空间。您可能需要存储各种数据类型（比如字符型、宽字符型、整型、浮点型、双浮点型、布尔型等）的信息，操作系统会根据变量的数据类型，来分配内存和决定在保留内存中存储什么。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://cacl2.ml//tags/C/"/>
+    
+      <category term="计算机编程" scheme="https://cacl2.ml//tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python实例:实现bing壁纸自动更新</title>
+    <link href="https://cacl2.ml/Python.html"/>
+    <id>https://cacl2.ml/Python.html</id>
+    <published>2018-10-21T08:48:27.000Z</published>
+    <updated>2019-02-03T09:36:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Bing搜索每天都会有一张图片更新，而这些图片的质量都很高，很多人就想把他设置为电脑壁纸，但是一天换一张也是比较麻烦的，因此，今天我们使用Python来实现<strong>每日自动更新Bing壁纸</strong></p></blockquote><a id="more"></a><ul><li>准备:</li></ul><ul><li>Python 3.7 <a href="python.org">download</a></li></ul><ul><li>requests模块(后续有安装教程)</li><li>自动更换壁纸脚本</li></ul><hr><h1 id="下载python并安装requests"><a href="#下载python并安装requests" class="headerlink" title="下载python并安装requests"></a>下载python并安装requests</h1><h2 id="下载python并安装"><a href="#下载python并安装" class="headerlink" title="下载python并安装"></a>下载python并安装</h2><p>在上文链接中找到适合自己电脑版本的python程序，安装即可。</p><p>##安装requests<br>python3.6及以上自带pip，我们只需要打开cmd，输入以下命令即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure><h1 id="建立python及bat脚本"><a href="#建立python及bat脚本" class="headerlink" title="建立python及bat脚本"></a>建立python及bat脚本</h1><h2 id="新建文本文件，命名为SetBingImageAsWallpaper-py，并输入下列内容。"><a href="#新建文本文件，命名为SetBingImageAsWallpaper-py，并输入下列内容。" class="headerlink" title="新建文本文件，命名为SetBingImageAsWallpaper.py，并输入下列内容。"></a>新建文本文件，命名为SetBingImageAsWallpaper.py，并输入下列内容。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> requests         </span><br><span class="line"><span class="keyword">import</span> os.path</span><br><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_img</span><span class="params">(img_url,dirname)</span>:</span></span><br><span class="line">    <span class="comment">#保存图片到磁盘文件夹dirname中</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(dirname):</span><br><span class="line">            <span class="keyword">print</span> (<span class="string">'文件夹'</span>,dirname,<span class="string">'不存在，重新建立'</span>)</span><br><span class="line">            <span class="comment">#os.mkdir(dirname)</span></span><br><span class="line">            os.makedirs(dirname)</span><br><span class="line">        <span class="comment">#获得图片文件名，包括后缀</span></span><br><span class="line">        basename = os.path.basename(img_url)</span><br><span class="line">        <span class="comment">#拼接目录与文件名，得到图片路径</span></span><br><span class="line">        filepath = os.path.join(dirname, basename)</span><br><span class="line">        <span class="comment">#下载图片，并保存到文件夹中</span></span><br><span class="line">        urllib.request.urlretrieve(img_url,filepath)</span><br><span class="line">    <span class="keyword">except</span> IOError <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'文件操作失败'</span>,e)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'错误 ：'</span>,e)</span><br><span class="line">    print(<span class="string">"Save"</span>, filepath, <span class="string">"successfully!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> filepath</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求网页，跳转到最终 img 地址</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_img_url</span><span class="params">(raw_img_url = <span class="string">"https://area.sinaapp.com/bingImg/"</span>)</span>:</span></span><br><span class="line">    r = requests.get(raw_img_url)       </span><br><span class="line">    img_url = r.url <span class="comment"># 得到图片文件的网址</span></span><br><span class="line">    print(<span class="string">'img_url:'</span>, img_url)</span><br><span class="line">    <span class="keyword">return</span> img_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置图片绝对路径 filepath 所指向的图片为壁纸</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_img_as_wallpaper</span><span class="params">(filepath)</span>:</span></span><br><span class="line">    ctypes.windll.user32.SystemParametersInfoW(<span class="number">20</span>, <span class="number">0</span>, filepath, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    dirname = <span class="string">"g:\\bingImg"</span>       <span class="comment"># 图片要被保存在的位置</span></span><br><span class="line">    img_url = get_img_url()</span><br><span class="line">    filepath = save_img(img_url, dirname)   <span class="comment"># 图片文件的的路径</span></span><br><span class="line">    set_img_as_wallpaper(filepath)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure><p>其中你只需要更改倒数第五行的内容。（python中，路径的”&quot;必须改为”\&quot;)</p><h2 id="新建一个名为Py-BingImg-bat的批处理文件，输入"><a href="#新建一个名为Py-BingImg-bat的批处理文件，输入" class="headerlink" title="新建一个名为Py_BingImg.bat的批处理文件，输入"></a>新建一个名为Py_BingImg.bat的批处理文件，输入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">del g:\bingImg\*.jpg</span><br><span class="line">python SetBingImgAsWallpaper.py</span><br></pre></td></tr></table></figure><h1 id="实现开机自动更改"><a href="#实现开机自动更改" class="headerlink" title="实现开机自动更改"></a>实现开机自动更改</h1><h2 id="复制上文中的bat文件，转至C-User-yourname-AppData-Roaming-Microsoft-Windows-开始菜单-程序-启动-右击选择粘贴快捷方式，这样，每次开机后就会自动运行批处理文件，删除昨天的壁纸文件并获取新壁纸。"><a href="#复制上文中的bat文件，转至C-User-yourname-AppData-Roaming-Microsoft-Windows-开始菜单-程序-启动-右击选择粘贴快捷方式，这样，每次开机后就会自动运行批处理文件，删除昨天的壁纸文件并获取新壁纸。" class="headerlink" title="复制上文中的bat文件，转至C:\User\yourname\AppData\Roaming\Microsoft\Windows\开始菜单\程序\启动 右击选择粘贴快捷方式，这样，每次开机后就会自动运行批处理文件，删除昨天的壁纸文件并获取新壁纸。"></a>复制上文中的bat文件，转至<code>C:\User\yourname\AppData\Roaming\Microsoft\Windows\开始菜单\程序\启动</code> 右击选择粘贴快捷方式，这样，每次开机后就会自动运行批处理文件，删除昨天的壁纸文件并获取新壁纸。</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Bing搜索每天都会有一张图片更新，而这些图片的质量都很高，很多人就想把他设置为电脑壁纸，但是一天换一张也是比较麻烦的，因此，今天我们使用Python来实现&lt;strong&gt;每日自动更新Bing壁纸&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://cacl2.ml//tags/Python/"/>
+    
+      <category term="壁纸" scheme="https://cacl2.ml//tags/%E5%A3%81%E7%BA%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国庆节快乐！</title>
+    <link href="https://cacl2.ml/National-Day.html"/>
+    <id>https://cacl2.ml/National-Day.html</id>
+    <published>2018-10-01T07:43:06.000Z</published>
+    <updated>2019-02-03T09:38:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本站祝全体用户国庆节快乐！</p><a id="more"></a><p><img src="/National-Day/chinese.jpg" alt="chinese.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本站祝全体用户国庆节快乐！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="公告" scheme="https://cacl2.ml//tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Photoshop学习笔记（1）</title>
+    <link href="https://cacl2.ml/Photoshop-Study.html"/>
+    <id>https://cacl2.ml/Photoshop-Study.html</id>
+    <published>2018-09-20T10:44:28.000Z</published>
+    <updated>2019-01-25T12:54:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>笔者使用的版本为Photoshop CS6,操作与界面可能略有不同</em></p><a id="more"></a><ol><li>像素:最小的图像单元，这种最小的图形的单元能在屏幕上显示通常是单个的染色点。</li><li>ppi:即为pixles per inch，指每英寸所拥有的像素数量。</li><li>位图与矢量图: 位图由像素点构成，放大到一定程度会失真，占用空间较大。矢量图由计算机命令构成，放大后不会失真，占用空间较小。</li></ol><blockquote><p>   各场景下的PPI值</p></blockquote><h2 id="场景-ppi"><a href="#场景-ppi" class="headerlink" title="|场景      |ppi  |"></a>|场景      |ppi  |</h2><h2 id="电脑屏幕-72"><a href="#电脑屏幕-72" class="headerlink" title="| 电脑屏幕 | 72  |"></a>| 电脑屏幕 | 72  |</h2><h2 id="彩色打印-320"><a href="#彩色打印-320" class="headerlink" title="| 彩色打印 | 320 |"></a>| 彩色打印 | 320 |</h2><h2 id="巨幅广告-9"><a href="#巨幅广告-9" class="headerlink" title="| 巨幅广告 | 9   |"></a>| 巨幅广告 | 9   |</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;笔者使用的版本为Photoshop CS6,操作与界面可能略有不同&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://cacl2.ml//tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018苹果秋季新品发布会</title>
+    <link href="https://cacl2.ml/Apple-new.html"/>
+    <id>https://cacl2.ml/Apple-new.html</id>
+    <published>2018-08-31T06:22:52.000Z</published>
+    <updated>2019-01-25T12:51:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>8月31日（今天）凌晨，苹果已经正式宣布将于北京时间9月13日凌晨1点举行秋季新品发布会</p><a id="more"></a><p>据可靠消息，苹果将会发布三款全新的iPhone机型，屏幕尺寸分别为5.8英寸、6.1英寸和6.5英寸。其中，6.1英寸版本使用LCD屏幕，价格相对低一些；5.8英寸和6.5英寸版本使用OLED屏幕。</p><p>命名上，采用OLED屏幕版本曝料称将命名为iPhone XS和iPhone XS Plus，LCD屏幕版本将命名为iPhone 2018</p><p>根据曝料信息，今年将发布的三款iPhone的内存升级相较于苹果以往的机型发布来说，稍显激进，OLED屏幕版本一下升级到了4GB，LCD屏幕版本升级至3GB，存储版本有64/256/512GB三种，OLED屏幕版本搭载A12处理器，LCD屏幕版本搭载A10处理器，支持后置双摄和无线快充。</p><p>售价方面，根据曝料信息，5.8英寸版本售价为899美元，6.5英寸版本999美元，6.1英寸版本699美元。<br><img src="/Apple-new/123.jpg" alt="123.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;8月31日（今天）凌晨，苹果已经正式宣布将于北京时间9月13日凌晨1点举行秋季新品发布会&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="资讯" scheme="https://cacl2.ml//tags/%E8%B5%84%E8%AE%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> 游虞山、太湖</title>
+    <link href="https://cacl2.ml/7.html"/>
+    <id>https://cacl2.ml/7.html</id>
+    <published>2018-08-19T12:12:40.000Z</published>
+    <updated>2019-01-25T12:51:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2018/08/22/Po4BHf.jpg" alt="Po4BHf.jpg"></p><a id="more"></a><p><img src="https://s1.ax1x.com/2018/08/22/Po4UgA.jpg" alt="Po4UgA.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po4ajI.jpg" alt="Po4ajI.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po4rE8.jpg" alt="Po4rE8.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po4sUS.jpg" alt="Po4sUS.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po4wut.jpg" alt="Po4wut.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po4y4g.jpg" alt="Po4y4g.jpg"><br><img src="https://s1.ax1x.com/2018/08/22/Po40DP.jpg" alt="Po40DP.jpg"><br>拍摄设备：SONY-HX 300</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2018/08/22/Po4BHf.jpg&quot; alt=&quot;Po4BHf.jpg&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="摄影" scheme="https://cacl2.ml//tags/%E6%91%84%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教你如何使用U盘安装Windows10系统</title>
+    <link href="https://cacl2.ml/6.html"/>
+    <id>https://cacl2.ml/6.html</id>
+    <published>2018-08-07T06:17:00.000Z</published>
+    <updated>2019-01-25T12:50:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h6><p>距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。</p><a id="more"></a><hr><h6 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料"></a>准备材料</h6><ul><li>硬件<ul><li>U盘/读卡器（不小于4GB）</li><li>一台未搭载Windows10的电脑</li></ul></li><li>软件<ul><li>Ultra ISO软碟通 <a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener">下载链接</a>（请支持正版，不提供破解版下载）</li><li>Windows 10 ISO文件（附文末）</li></ul></li></ul><hr><h5 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h5><h6 id="0x01-下载文件"><a href="#0x01-下载文件" class="headerlink" title="0x01.下载文件"></a>0x01.下载文件</h6><h6 id="下载Windows10ISO文件"><a href="#下载Windows10ISO文件" class="headerlink" title="下载Windows10ISO文件"></a>下载Windows10ISO文件</h6><p>首先，我们需要下载好Windows10的ISO文件（【需用迅雷下载）<br><a href="https://imgchr.com/i/PsppqO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PsppqO.png" alt="PsppqO.png"></a><br>文件有3.24GB, 下载需要一定时间。（会在文末给出ed2k链接，复制好后进入迅雷可直接下载）。</p><h6 id="下载UltraISO"><a href="#下载UltraISO" class="headerlink" title="下载UltraISO"></a>下载UltraISO</h6><p>点开我放在上面的链接后，点击【免费下载试用】，即可下载安装包文件，安装过程不再赘述。<br><a href="https://imgchr.com/i/PspMdg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspMdg.png" alt="PspMdg.png"></a></p><h6 id="0x02-写入至U盘"><a href="#0x02-写入至U盘" class="headerlink" title="0x02.写入至U盘"></a>0x02.写入至U盘</h6><p>当我们把上面两项都安装并下载好后，我们插入U盘（台式尽量选择后侧USB接口），打开安装好的Ultra ISO<br><a href="https://imgchr.com/i/PspGzq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspGzq.jpg" alt="PspGzq.jpg"></a><br>（因笔者已购买该软件，在网上找了张图，来源见水印。）</p><p>我们打开软件后，点击继续试用（若要体验完整版请订购<br>),进入主界面，点击红框框出的部位，找到自己放置ISO文件的目录，并双击打开刚刚下好的ISO文件。<br><a href="https://imgchr.com/i/PspReO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/PspReO.jpg" alt="PspReO.jpg"></a><br>打开ISO文件后，依次点击【启动】-【写入硬盘映像】-【硬盘驱动器（选择u盘）】-【写入方式】选择 【USB-HDD+】-【写入】<br><a href="https://imgchr.com/i/Ps9MX6" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/Ps9MX6.jpg" alt="Ps9MX6.jpg"></a><br><a href="https://imgchr.com/i/Ps9GAe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/07/Ps9GAe.jpg" alt="Ps9GAe.jpg"></a><br>当以上步骤都做好后，你会发现U盘里多出了许多文件，至此，一个启动盘就做好了。</p><h6 id="0x03-开始安装"><a href="#0x03-开始安装" class="headerlink" title="0x03.开始安装"></a>0x03.开始安装</h6><p>我们重启电脑，在BIOS初始化页面打开boot menu（根据自己主板型号搜索打开方式），用键盘方向键选择【USB-HDD+】，按Enter键确认，这时，我们会进入windows10的安装界面，过程十分简单，只需要设置一些内容，后面的过程都是自动化的，安装好后会自动重启，进入全新的Windwos10系统（如果安装时选择升级会保留之前Windwos的设置）</p><hr><p>附:<br>Windows10 ISO：<code>ed2k://|file|cn_windows_10_consumer_editions_version_1803_updated_march_2018_x86_dvd_12063452.iso|3480692736|0EC3C40EF13D772798209981F18B6A5D|/</code><br>本文部分链接与图片转自PConline及I tell you</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h6&gt;&lt;p&gt;距离windows10第一个正式版发行到现在，已过去了整整三年，在三年的时间里，不少机器都已用上了更加流畅的Windwos10，但仍有许多老旧机器仍在使用windows7，windows xp等系统，因此，特写出此教程，让大家都能用上windows10。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="玩机" scheme="https://cacl2.ml//tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+      <category term="干货" scheme="https://cacl2.ml//tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本网站已全面恢复</title>
+    <link href="https://cacl2.ml/5.html"/>
+    <id>https://cacl2.ml/5.html</id>
+    <published>2018-08-06T09:04:00.000Z</published>
+    <updated>2019-01-25T12:50:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于一些原因，使站长将存储在本地的站点文件删除<a id="more"></a>，只有一些已经上传的html文件（嘤嘤嘤），被迫只能重新安装hexo，经过一个星期后，网站所有文章都已恢复，并且还进行了美化，可以说是一次升级。</p><p>有人问我什么时候写tasker的教程······咳咳···下次绝对发</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于一些原因，使站长将存储在本地的站点文件删除
+    
+    </summary>
+    
+    
+      <category term="公告" scheme="https://cacl2.ml//tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tasker:Android上的自动化标杆</title>
+    <link href="https://cacl2.ml/4.html"/>
+    <id>https://cacl2.ml/4.html</id>
+    <published>2018-07-24T04:53:02.000Z</published>
+    <updated>2019-01-25T12:49:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>智能手机之所以能够称为「智能」，根本原因是除了预先设定好的功能和程序以外，我们还可以在手机上实现一定的「自主性」，换句话说就是我们有能力通过安装 App 或者更加高级的操作 —— 比如自动化工具和脚本，来让手机适应我们的生活与通讯以外的需求。特别是近几年来随着智能手机的发展普及，手机上的传感器越来越丰富，自动化工具和脚本能做到的事情也在飞速地增多。</p><a id="more"></a><p><a href="https://imgchr.com/i/PrVmv9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/06/PrVmv9.md.png" alt="PrVmv9.md.png"></a></p><p>作为普通的手机用户，绝大部分人是不会因为某些需求去学习如何编写 App 这种「极限挑战」，自动化工具就是因此而生，用户只需付出很小的学习成本就能自己动手制作出满足自己要求的自动化应用，达到学习成本与实现复杂度的平衡。</p><p><img src="https://s1.ax1x.com/2018/08/06/PrV1UK.jpg" alt="PrV1UK.jpg"></p><p>比如 iOS 上就有能独当一面的 Workflow，不过由于 iOS 系统对于各项权限加上硬件的主动限制，它的功能止步于「非常好用的自动化工具」，除了自动化已有功能外，用户如果想要创建一些系统没有的新功能限制非常大。</p><p><strong>Tasker 是什么？</strong></p><p>我们今天要介绍的自动化工具 Tasker 比 Workflow 更强大，自由。得益于 Android 系统的开放性与对系统 API 调用的宽松要求，Tasker 可以实现更多样，更复杂的自动化操作。特别是在获得 ROOT 权限之后 Tasker 能访问几乎所有数据（手机内外的皆可），甚至实现 手机硬件支持的任何操作（即使系统没有）。<br>除了强大的功能自动化，Tasker 还提供完整的界面设计支持，从里到外打造完全属于自己的智能手机。</p><p><a href="https://imgchr.com/i/PrVtvd" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/06/PrVtvd.md.png" alt="PrVtvd.md.png"></a></p><p>除了上面文章提到的动作，这里再举一些 Tasker 的 <strong>基本操作：</strong></p><ul><li><p>收到短信后自动复制验证码，将验证码自动转发到微信或者另一台手机。</p></li><li><p>每天早上起床时自动播放喜欢的播客作为闹钟，同时音量会逐渐变大，再也不怕闹钟「毁歌」。</p></li><li><p>连上特定的 Wifi 立即打开「自动同步」，断开 Wifi 关闭。</p></li><li><p>每天定时自动从 Pixiv 和 Bing 等网站获取壁纸然后自动更换。</p></li><li><p>运行小说软件时自动调暗亮度和开启护眼模式，关闭自动旋转。</p></li><li><p>运行地图软件自动打开 GPS，关闭软件时自动关闭 GPS。</p></li><li><p>到达指定地点发送指定短信给某个联系人（比如到了咖啡店自动发短信给朋友说自己已经到了）。</p></li><li><p>收到短信时拍照或者录音（相当于无限距离的远程按钮）。</p><p>以及一切同类应用能做到的所有事情……</p><p>本次介绍了Tasker的种种强大的功能，下一篇文章将给大家介绍如何使用Tasker实现 自动复制验证码。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;智能手机之所以能够称为「智能」，根本原因是除了预先设定好的功能和程序以外，我们还可以在手机上实现一定的「自主性」，换句话说就是我们有能力通过安装 App 或者更加高级的操作 —— 比如自动化工具和脚本，来让手机适应我们的生活与通讯以外的需求。特别是近几年来随着智能手机的发展普及，手机上的传感器越来越丰富，自动化工具和脚本能做到的事情也在飞速地增多。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="软件介绍" scheme="https://cacl2.ml//tags/%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五年内取代安卓？聊聊谷歌新系统Fuchsia</title>
+    <link href="https://cacl2.ml/3.html"/>
+    <id>https://cacl2.ml/3.html</id>
+    <published>2018-07-21T03:29:56.000Z</published>
+    <updated>2019-01-25T12:49:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>7月20日消息，据国外媒体报道，两年多来，谷歌一个秘而不宣的工程师团队一直致力于Fuchsia项目，他们希望Fuchsia最终将取代占据全球主导地位的移动操作系统Android。随着团队的发展，团队内部围绕Fuchsia的运作方式出现了一些激烈争论，他们将如何应对？</p><a id="more"></a><p><img src="https://s1.ax1x.com/2018/07/21/P8DH1S.jpg" alt="PdfMan.jpg"></p><p>随着更多个人设备和其他小型设备的不断上线，从零起步的Fuchsia项目旨在克服Android的一些局限性，更好地适应设备中的语音交互功能和频繁的安全更新，并实现从笔记本电脑到微型联网传感器等不同设备之间的无缝性。CEO桑达尔·皮查伊（Sundar Pichai）已设定谷歌的发展方向：让人工智能服务瞄准所有消费者。然而，依赖于大量硬件合作伙伴的Android却未能跟上发展的脚步。</p><p>2016年，谷歌开始在网上发布Fuchsia系统的代码，并让外部应用序开发者修补了一些开源代码。公司也开始测试该系统的一些应用，如，交互式屏显和YouTube语音命令功能。</p><p>据知情人士透露，Fuchsia团队成员已在讨论一项更有野心的计划：打造一个统一的操作系统，既可适用于谷歌的所有内部设备（如Pixel手机和智能音箱），也可用于目前搭载Android或Chrome OS的第三方设备。</p><p>据知情人士称，工程师们希望在三年内让Fuchsia应用于音控音箱等智能家居设备，再扩展到笔记本电脑等“较大设备”，并在“未来五年内”取代Android。目前全球逾四分之三的智能手机均搭载Android系统。</p><p>但是皮查伊以及Android和Chrome业务主管希罗史·洛克海默尔（Hiroshi Lockheimer）尚未针对Fuchsia制定产品路线图。由于Android拥有数十个硬件合作伙伴和数千名开发人员，在移动广告上可创收数十亿美元，因此高管们对任何改革Android的计划均保持审慎的态度。Android也是监管审查的对象和一些法律纠纷的起因，这意味着对Android的任何改变都将得到密切关注。近日，欧盟委员会因谷歌使用Android推广服务、损害竞争的做法对其处以50亿美元的反垄断罚款。而在谷歌内部，Fuchsia的设计和部署，特别是隐私功能，已引发一些内部分歧。</p><p>谷歌已公开把Fuchsia列为公司鼓励产品创新的典范之一。一名发言人曾在邮件中表示，“谷歌将这些开源实验视为对创新的投资。”2015年，洛克海默尔在文章中声称，公司未计划让Android取代Chrome操作系统。谷歌发言人表示这一立场今天仍然适用。</p><p>知情人士表示，皮查伊已在公司内部表达了对Fuchsia项目的支持。Fuchsia团队目前拥有100多名成员，其中包括马蒂亚斯·杜阿尔特（Matias Duarte）等资深软件开发者。作为设计主管，杜阿尔特曾在谷歌等公司领导数个开创性项目。不过一位知情人士表示，杜阿尔特只是兼职从事这个项目。</p><p>Fuchsia项目的焦点是在与苹果的竞争中，让谷歌拥有更多的优势。虽然在智能手机市场中，Android约85%的市场份额远超过苹果15%的份额，但苹果操作系统在性能、隐私和安全以及跨设备的整合性等方面都占有上风。苹果的另一个关键优势是：大多数iPhone用户在苹果发布新版操作系统时会立刻更新手机，而不到10%的Android用户会这么做。这意味着谷歌的最新系统服务只能覆盖一小部分Android用户。</p><p>信息加密应用Confide的联合创始人杰弗里·格罗斯曼（Jeffrey Grossman）表示：“研发Android以外的产品可以让谷歌在他们认为十年前所犯下的任何错误中拥有清零的机会。谷歌或许能够重新获得此前让给设备制造商和电信运营商的一些权力。”</p><p>谷歌依靠手机制造商和无线网络运营商向Android设备推送操作系统及其安全更新。在推广最新软件上，这些合作伙伴的积极性远不如谷歌：手机制造商更乐于出售新设备，电信公司还有其他优先事项要考虑。最近谷歌已试图正面解决这个问题。今年5月，谷歌修改了与手机制造商的协议，要求它们每年需数次在设备中更新安全补丁。</p><p>有迹象表明Fuchsia正纳入更严格的安全措施。在线发布的软件代码中，工程师将加密的用户密钥整合到系统中，这是一种隐私工具，可确保每次软件更新时信息都能得到保护。团队成员也包括这方面的专业人才。今年1月，Android的首席安全工程师尼克·克拉列维奇（Nick Kralevich）加入了Fuchsia项目。在代码页面中，参与Fuchsia项目的谷歌员工表示，该软件尚未最终确定。</p><p>谷歌研发Android时，手机处在采用触摸屏的发展初期。目前，Android无法处理谷歌视为计算未来的语音应用类型。因此，对于正在开发的Fuchsia，其核心是语音交互。它的设计也更灵活，因为它有望适应多种屏幕尺寸，谷歌希望在电视、汽车和冰箱等新产品中推广其软件。</p><p>尽管研发团队人才济济，Fuchsia也享有公司的支持，谷歌迄今未公布Fuchsia的实际用途。一些开发者编写过这个操作系统，但还没有人把它设为某款热门商业设备中的应用或服务的基础系统。谷歌开发者网站上发布的最新代码显示，谷歌可能正在开发以Fuchsia为基础的YouTube应用，但谷歌还未公开任何运行该系统的正式服务。</p><p>谷歌还需解决一些内部分歧。Fuchsia研发者所追求的一些原则与谷歌的商业模式背道而驰。谷歌的广告业务很大程度依赖着基于位置和活动对用户进行定位的能力。而Fuchsia的隐私功能如果实施，将阻碍这一重要业务的发展。据知情人士透露，针对Fuchsia的安全和隐私功能，广告和工程团队之间至少爆发过一次冲突。而广告团队占了上风。</p><p>若考虑弃用Android和Chrome，谷歌可能面临其他风险。大量独立开发者以及三星、华为和LG等设备制造商都依赖着Android操作系统。Chrome也是许多学校和机构的笔记本电脑所采用的重要操作系统。谷歌不能简单地停止支持Android和Chrome操作系统、指望这个庞大的生态系统能够迅速替换成Fuchsia生态。</p><p>另一个风险则来自Fuchsia的技术架构。Android和Chrome操作系统都是基于Linux而构建的。“Linux内核”是Google当前这些操作系统的核心，负责处理智能手机和其他设备的硬件和软件之间的指令。Fuchsia使用了一种名为Zircon的不同内核，它弃用了Linux中的许多旧技术。这可能使一些现有设备不兼容。</p><p>不过，弃用Linux也可能有益于谷歌。这就得谈到谷歌和甲骨文之间冗长而又繁杂的诉讼战了：Android的构建使用了甲骨文拥有的Java技术，而甲骨文指控谷歌窃取这些技术用于推动其移动业务。弃用Linux将在这场诉讼中有利于谷歌。</p><p>Fuchsia项目带来的另一个有利之处是，为谷歌的资深开源黑客带来技术挑战。谷歌常常安排一些老员工参与这类需耗费大量时间的复杂项目中，以降低他们跳槽的风险。有人这么描述Fuchsia项目，“这个项目旨在留住高级工程师。</p><p>不过据最新消息，谷歌向媒体CNET透露，Fuchsia何时能应用于设备中尚不明确，不存在什么“五年计划”。在一份声明中，谷歌把这个操作系统描述为“谷歌正展开的众多实验性开源项目之一”，目前不存在把它用在未来产品的时间表。</p><p>转自IThome</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;7月20日消息，据国外媒体报道，两年多来，谷歌一个秘而不宣的工程师团队一直致力于Fuchsia项目，他们希望Fuchsia最终将取代占据全球主导地位的移动操作系统Android。随着团队的发展，团队内部围绕Fuchsia的运作方式出现了一些激烈争论，他们将如何应对？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="资讯" scheme="https://cacl2.ml//tags/%E8%B5%84%E8%AE%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>震惊！谷歌或将抛弃Android，Android即将凉凉</title>
+    <link href="https://cacl2.ml/2.html"/>
+    <id>https://cacl2.ml/2.html</id>
+    <published>2018-07-20T11:10:00.000Z</published>
+    <updated>2019-01-25T12:49:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谷歌正在悄然开发兼容手机/平板/PC的一整套操作系统Fuchsia<a id="more"></a>，其可能会在5年内取代Android和Chrome OS，可以有效地解决Android系统碎片化问题。谷歌工程师们希望在3年内将Fuchsia嵌入联网家用设备，再到笔记本电脑上，最后延伸至安卓手机</p><p><img src="https://s1.ax1x.com/2018/07/31/PdfMan.jpg" alt="PdfMan.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谷歌正在悄然开发兼容手机/平板/PC的一整套操作系统Fuchsia
+    
+    </summary>
+    
+    
+      <category term="资讯" scheme="https://cacl2.ml//tags/%E8%B5%84%E8%AE%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐1s各版本刷机资源</title>
+    <link href="https://cacl2.ml/1.html"/>
+    <id>https://cacl2.ml/1.html</id>
+    <published>2018-07-20T07:15:00.000Z</published>
+    <updated>2019-01-25T12:48:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>乐1s(x3)刷机资源</strong></p><ul><li>TWRP<ul><li><a href="https://twrp.me/letv/letvle1s.html" target="_blank" rel="noopener">Download</a></li></ul></li><li>官方eui <ul><li><a href="http://bug.eui.com" title="下载" target="_blank" rel="noopener">link</a></li></ul></li></ul><a id="more"></a><ul><li><p>安卓5.0</p><ul><li>暂无</li></ul></li><li><p>安卓6.0</p><ul><li>AOKP:<a href="https://drive.google.com/open?id=0B5j5ogoTw6-VQl9pTEF5TEhlS2M" title="下载" target="_blank" rel="noopener">AOKP Download</a></li><li>AICP:<a href="https://drive.google.com/file/d/0B1WkscrFwUhsUHRiUVBjYm4tWjg/view" title="下载" target="_blank" rel="noopener">AICP Download</a></li><li>Crdroid:<a href="https://drive.google.com/file/d/0By6wIFGegKJCbzVwMWFXUm83YjQ/view" title="下载" target="_blank" rel="noopener">Crdroid Download</a></li></ul></li><li><p>安卓7.0</p><ul><li>RR-OS:<a href="https://www.androidfilehost.com/?w=files&flid=164098" title="下载" target="_blank" rel="noopener">RROS Download</a></li><li>Lineage OS:<a href="https://www.androidfilehost.com/?w=files&flid=164097" title="下载" target="_blank" rel="noopener">LOS Download</a></li><li>AOKP:<a href="https://drive.google.com/open?id=0B5j5ogoTw6-VQl9pTEF5TEhlS2M" title="下载" target="_blank" rel="noopener">AOKP Download</a></li><li>Candy OS:<a href="https://drive.google.com/open?id=0B9tE3N-9WUj2QUZhNXVqcTVqemM" title="下载" target="_blank" rel="noopener">Candy Download</a></li><li>Viper OS:<a href="https://forum.xda-developers.com/leeco-le-1s/development/rom-viperos-v3-1-1-t3824898" target="_blank" rel="noopener">Viper OS Download</a>(感谢酷安@Supermexyh提供）</li><li>DOT OS:<a href="https://sourceforge.net/projects/dotos-ota/files/x3/DOT-N-v1.2-20180130-x3-OFFICIAL.zip/download" target="_blank" rel="noopener">Dot os download</a></li></ul></li></ul><hr><p>本文所有链接均转自XDA<br>最后更新2018/8/10 12:44:06</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;乐1s(x3)刷机资源&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TWRP&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://twrp.me/letv/letvle1s.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;官方eui &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://bug.eui.com&quot; title=&quot;下载&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="玩机" scheme="https://cacl2.ml//tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+  </entry>
+  
+</feed>

@@ -287,7 +287,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 22:37:41 / 修改时间：22:41:54" itemprop="dateCreated datePublished" datetime="2019-08-12T22:37:41+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 22:37:41 / 修改时间：22:45:06" itemprop="dateCreated datePublished" datetime="2019-08-12T22:37:41+08:00">2019-08-12</time>
             </span>
           
             
@@ -332,22 +332,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近学习了深度优先搜索（DFS）算法，特写此文章，以供未来的复习和归纳。</p>
+          <!--noindex-->
           
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近学习了深度优先搜索（DFS）算法，特写此文章，以供未来的复习和归纳。</p>
-<hr>
-<h3 id="算法解释"><a href="#算法解释" class="headerlink" title="算法解释"></a>算法解释</h3><p>深度优先搜索属于图算法的一种，英文缩写为DFS，即Depth First Search。其过程简要来说是对每一个可能的分支路径深入到不能再深入为止后回溯，而且每个节点只能访问一次。<br>以下图为例，从根节点A进行深度优先搜索，目标为G。可以得到的搜索过程如下：A-&gt;C-&gt;F（回溯至A）A-&gt;B-&gt;E（回溯至B）B-&gt;D-&gt;G搜索完成。需要注意的是，回溯前必须将已访问的节点进行标记，否则将会陷入死循环。<br><img src="https://s2.ax1x.com/2019/08/12/mpB7uT.png" alt="mpB7uT.png"></p>
-<h3 id="基本框架"><a href="#基本框架" class="headerlink" title="基本框架"></a>基本框架</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> dep,[状态])</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(当前是目标状态) 输出解或者作计数、评价处理;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; 状态的转移可能数; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			保存现场(断点,维护参数表);</span><br><span class="line">			<span class="keyword">if</span>(第i种状态拓展可行) </span><br><span class="line">				dfs(dep+<span class="number">1</span>,[新状态]);</span><br><span class="line">			恢复现场(回溯,回到上一个状态);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><blockquote>
-<blockquote>
-<p>在n*m棋盘上有一中国象棋中的马，马走日，且只能向右走。<br>请你找出一条可行路径，使得马可以从棋盘的左下角（1,1）走到右上角（n，m）。<br>输入样例<br>9 5<br>输出样例<br>(1,1)-&gt;(3,2)-&gt;(5,1)-&gt;(6,3)-&gt;(7,1)-&gt;(8,3)-&gt;(9,5)</p>
-</blockquote>
-</blockquote>
-<p>根据dfs算法，我们可以得知：<br>1.在无法确定走哪条线路的时候，任选一条线路进行尝试；<br>2.当从某点出发，所有可能到达的点都不能到达终点时，说明此点是一个死节点，必须回溯到上一个点，并重新选择一条新的线路进行尝试。<br>对于这样的一种能走下去就继续向下走的策 略，就是我们常说的深度优先搜索，即DFS。</p>
-<hr>
-<p>因此，我们可以利用递归思想写出以下dfs函数</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> dep)</span></span>&#123;<span class="comment">//跳了dep步跳到qd。</span></span><br><span class="line">	<span class="keyword">if</span>(qd.x==zd.x&amp;&amp;qd.y==zd.y)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"success "</span>&lt;&lt;dep&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">			<span class="keyword">if</span>(check(qd,dx[i],dy[i] )&#123;</span><br><span class="line">				qd.x+=dx[i]; qd.y+=dy[i]; <span class="comment">//状态转移</span></span><br><span class="line">				dfs(dep+<span class="number">1</span>);</span><br><span class="line">				qd.x-=dx[i]; qd.y-=dy[i]; <span class="comment">//恢复状态</span></span><br><span class="line">			&#125;		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <div class="post-button text-center">
+              <a class="btn" href="/深度优先搜索-DFS-算法.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
